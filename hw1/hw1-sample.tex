@@ -1,0 +1,79 @@
+\documentclass{article}
+\usepackage[left=3cm,top=3cm,right=4cm,nohead,bottom=3cm]{geometry}
+\input{hw1-macros}
+
+\title{15-897 Homework 1}
+\author{YOUR NAME HERE}
+
+\begin{document}
+\maketitle
+
+\section{Logistics}
+\section{Submission}
+\section{Theory}
+\subsection{Be greedy}
+\begin{task} \taskpts{15}
+Show that this bound is tight by describing an algorithm which takes a span
+$S \geq 2$
+and a number of processors $P \geq 2$ and constructs a dag for which there
+exists a greedy schedule of length {\em exactly} $\frac{W}{P} + S\frac{P-1}{P}$.
+(In other words, you will be giving a family of dags, one for each $S$ and $P$.)
+Using diagrams to help explain your algorithm will likely be helpful.
+
+\textbf{Describe the schedule} which takes time $\frac{W}{P} + S\frac{P-1}{P}$
+(see hint below).
+\end{task}
+\begin{sol}
+\end{sol}
+
+\subsection{Toward practical schedulers}
+\begin{task} \taskpts{5}
+Suppose we use this scheduler to compute
+\texttt{fib(42)} (the $42^{nd}$ Fibonacci number) using the simple,
+naturally parallel and recursive exponential-work algorithm.
+How many vertices are there in the dag at level 20 (count the initial vertex
+as level 0), assuming we do not do any granularity control? That is, how many
+vertices will need to be stored in the container at this level?
+Approximately how does this number scale at lower levels of the dag? What
+does this mean for our scheduler's space usage?
+\end{task}
+\begin{sol}
+\end{sol}
+
+\begin{task} \taskpts{5}
+Describe another likely problem (not having to do with space usage)
+with our scheduler. Note that the description of the implementation was
+deliberately vague. You may make whatever (reasonable) assumptions you'd like
+about the exact implementation or the underlying system, but please document
+whatever important and non-obvious assumptions you make so we know how
+to interpret your answer.
+\end{task}
+\begin{sol}
+\end{sol}
+
+\begin{task} \taskpts{5}
+Suggest an improvement to the scheduler which has better space usage. You do not
+need to describe its implementation in detail, or to prove any properties of
+it. This is just to get you thinking about scheduling approaches. Your scheduler
+also need not solve the problem you posed in the previous task (though it would
+be great if it did!)
+\end{task}
+\begin{sol}
+\end{sol}
+
+\section{Practice}
+\subsection{Setting up PASL}
+\subsection{Sequence Library}
+\subsection{Merge}
+\subsection{The Pittsburgh Skyline Problem (with thanks and apologies to 15-210)}
+\subsection{Testing}
+\subsection{Evaluation}
+\begin{task} \taskpts{5}
+Briefly explain what the speedup curve says about the parallelism of your
+skyline code. If your curve doesn't look as good as you had hoped, suggest
+why this might be the case.
+\end{task}
+\begin{sol}
+\end{sol}
+
+\end{document}
